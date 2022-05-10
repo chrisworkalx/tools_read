@@ -24,3 +24,8 @@
         3. 卸载GNOME Desktop命令
              yum groupremove "GNOME Desktop"
     ```
+5. 注意如果vnc-server连接失败出现超时的状况需要在服务器中打开防火墙执行下面命令
+    - ```
+    iptables -I INPUT -p tcp --dport 5901:5903 -j ACCEPT
+        -   这里相当于开放5901，5902，5903端口权限
+    ```
